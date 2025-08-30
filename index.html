@@ -23,8 +23,55 @@
             color: var(--dark-gray);
             margin: 0;
             padding: 1rem;
+            padding-top: 70px;
             -webkit-text-size-adjust: 100%;
         }
+
+        .fixed-header {
+            position: fixed; /* Membuat header tetap di posisinya */
+            top: 0; /* Menempel di bagian atas */
+            left: 0;
+            width: 100%;
+            background-color: #ffffff; /* Latar belakang putih */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sedikit bayangan di bawah */
+            padding: 10px 0;
+            z-index: 1000; /* Memastikan header berada di atas elemen lain */
+        }
+        
+        .header-content {
+            max-width: 800px; /* Lebar konten sama dengan container Anda */
+            margin: 0 auto;
+            display: flex; /* Menggunakan flexbox untuk menata tombol */
+            justify-content: center; /* Memusatkan tombol secara horizontal */
+            gap: 20px; /* Jarak antar tombol */
+        }
+        
+        .header-btn {
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .blue-btn {
+            background-color: #007bff; /* Biru */
+        }
+        
+        .blue-btn:hover {
+            background-color: #0056b3; /* Biru lebih gelap saat hover */
+        }
+        
+        .green-btn {
+            background-color: #28a745; /* Hijau */
+        }
+        
+        .green-btn:hover {
+            background-color: #1e7e34; /* Hijau lebih gelap saat hover */
+        }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -138,6 +185,13 @@
 </head>
 <body>
 
+<header class="fixed-header">
+    <div class="header-content">
+        <a href="https://cekbarang.netlify.app/" class="header-btn blue-btn">Home</a>
+        <a href="https://docs.google.com/spreadsheets/d/15CtlzSn56c1oTL_FhayaumWPb6ZVXlE4b7GZ040_QH0/edit?gid=1011295621#gid=1011295621" class="header-btn green-btn">Spreadsheet</a>
+    </div>
+</header>
+    
 <div class="container">
     <h1>Form Cek Barang Jepang-Indo</h1>
     <form id="submissionForm">
